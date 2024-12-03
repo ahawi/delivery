@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --color-light: #ffffff;
+  --color-gray: #d9d9d9;
+  --color-gray-dark: #595959;
+  --color-blue: #1890ff;
+
+  --border-radius: 2px;
+  --border: 1px solid var(--color-gray);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+.transparent {
+  background-color: transparent !important;
+  border: 1px solid var(--color-gray) !important;
+  color: var(--color-gray-dark) !important;
+}
+
+.container {
+  max-width: 1230px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+.header {
+  padding-block: 44px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__buttons {
+  display: flex;
+  column-gap: 8px;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  height: 40px;
+  padding: 8px 16px;
+  color: var(--color-light);
+  background-color: var(--color-blue);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.header__button-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.content {
+  height: 100px;
+  background: linear-gradient(
+    90deg,
+    rgba(245, 245, 245, 1) 1%,
+    rgba(245, 245, 245, 1) 100%
+  );
+}
+
+.footer {
+  padding-block: 60px;
+  background-color: var(--color-light);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 36px;
+}
+
+.footer__menu {
+  flex: 1;
+}
+
+.footer__menu-list {
+  display: flex;
+  column-gap: 15px;
+}
+
+.footer__menu-link {
+  text-decoration: none;
+  color: var(--color-gray-dark);
+  font-size: 18px;
+}
+
+.footer__soc1als-list {
+  display: flex;
+  column-gap: 21px;
+  align-items: center;
+}
