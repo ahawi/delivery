@@ -1,3 +1,5 @@
+@import url("./normalize.css");
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.woff2") format("woff2");
@@ -6,22 +8,18 @@
   font-display: swap;
 }
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
+
+  line-height: 1.17;
 }
 
 :root {
@@ -95,12 +93,45 @@ body {
 }
 
 .content {
-  height: 100px;
   background: linear-gradient(
     90deg,
     rgba(245, 245, 245, 1) 1%,
     rgba(245, 245, 245, 1) 100%
   );
+}
+
+.hero {
+  background-image: url("./images/hero-banner.jpg");
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding-block: 68px;
+  padding-left: 70px;
+}
+
+.hero__inner {
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.hero__title {
+  font-size: 39px;
+  font-weight: 700;
+}
+
+.hero__description {
+  font-size: 24px;
+}
+
+.rests {
+  margin-top: 56px;
+}
+
+.rests__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 44px;
 }
 
 .footer {
