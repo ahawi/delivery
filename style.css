@@ -362,6 +362,58 @@ h3 {
   padding-bottom: 113px;
 }
 
+.catalog__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 52px;
+  padding-bottom: 44px;
+}
+
+.catalog__header-description {
+  display: flex;
+  column-gap: 26px;
+  font-size: 18px;
+}
+
+.catalog__header-description-rating {
+  color: #ffc107;
+  font-weight: 700;
+  position: relative;
+}
+
+.catalog__header-description-rating::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  aspect-ratio: 1;
+  background-image: url("./images/rating.svg");
+  top: calc(50% - 3px);
+  right: calc(100% + 20px);
+  transform: translate(100%, -50%);
+}
+
+.catalog__header-description-price {
+  position: relative;
+}
+
+.catalog__header-description-price::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-gray-light);
+  top: calc(50% - 2px);
+  left: calc(50% + 48px);
+  transform: translate(-50%, -50%);
+}
+
+.catalog__header-description-price,
+.catalog__header-description-category {
+  color: var(--color-gray-light);
+}
+
 .catalog__item {
   box-shadow: var(--card-shadow);
   border-radius: var(--border-radius-card);
