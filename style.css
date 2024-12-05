@@ -17,14 +17,20 @@
 }
 
 :root {
-  --color-dark: #000000;
   --color-light: #ffffff;
   --color-gray: #d9d9d9;
+  --color-gray-light: #8c8c8c;
   --color-gray-dark: #595959;
+  --color-dark: #000000;
   --color-blue: #1890ff;
 
   --border-radius: 2px;
+  --border-radius-card: 7px;
   --border: 1px solid var(--color-gray);
+
+  --padding-x-card: 24px;
+
+  --card-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
 }
 
 a {
@@ -46,6 +52,11 @@ h2 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -59,6 +70,12 @@ h2 {
   overflow: hidden !important;
 }
 
+.container {
+  max-width: 1230px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
 .white-bg {
   background-color: var(--color-light) !important;
   border: 1px solid var(--color-gray) !important;
@@ -70,10 +87,8 @@ h2 {
   transition-duration: 0.2s;
 }
 
-.container {
-  max-width: 1230px;
-  padding-inline: 15px;
-  margin-inline: auto;
+.title {
+  padding-bottom: 44px;
 }
 
 .grid {
@@ -93,7 +108,7 @@ h2 {
   color: var(--color-light);
   background-color: var(--color-blue);
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: var(--border-radius);
 }
 
 .button svg *[fill] {
@@ -130,7 +145,6 @@ h2 {
     rgb(245, 245, 245) 1%,
     rgb(255, 255, 255) 100%
   );
-  padding-bottom: 90px;
 }
 
 /* баннер */
@@ -163,6 +177,7 @@ h2 {
 
 .rests {
   margin-top: 56px;
+  padding-bottom: 90px;
 }
 
 .rests__header {
@@ -197,13 +212,9 @@ h2 {
   color: #bfbfbf;
 }
 
-.rests__list {
-  padding-top: 44px;
-}
-
 .rests__item {
-  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
-  border-radius: 7px;
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius-card);
   background-color: var(--color-light);
   transition-duration: 0.2s;
 }
@@ -221,7 +232,7 @@ h2 {
 }
 
 .rests__item-image {
-  border-radius: 7px 7px 0px 0px;
+  border-radius: var(--border-radius-card) var(--border-radius-card) 0px 0px;
 }
 
 .rests__item-body {
@@ -229,7 +240,7 @@ h2 {
   flex-direction: column;
   row-gap: 25px;
 
-  padding-inline: 24px;
+  padding-inline: var(--padding-x-card);
 }
 
 .rests__item-title {
@@ -247,7 +258,7 @@ h2 {
   width: 56px;
   font-size: 12px;
   font-weight: 400;
-  border-radius: 2px;
+  border-radius: var(--border-radius);
   padding-inline: 8px;
   padding-top: 4px;
   top: 50%;
@@ -293,7 +304,7 @@ h2 {
   width: 5px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: #8c8c8c;
+  background-color: var(--color-gray-light);
   top: 50%;
   left: calc(50% + 48px);
   transform: translate(-50%, -50%);
@@ -301,7 +312,7 @@ h2 {
 
 .rests__item-description-price,
 .rests__item-description-category {
-  color: #8c8c8c;
+  color: var(--color-gray-light);
 }
 
 /* подвал */
@@ -344,4 +355,43 @@ h2 {
 
 .footer__soc1als-link:hover {
   opacity: 0.7;
+}
+
+/* отдельный ресторан */
+.catalog {
+  padding-bottom: 113px;
+}
+
+.catalog__item {
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius-card);
+  background-color: var(--color-light);
+}
+
+.catalog__item-body {
+  padding: var(--padding-x-card) var(--padding-x-card) 30px
+    var(--padding-x-card);
+}
+
+.catalog__item-description {
+  font-size: 18px;
+  color: var(--color-gray-light);
+  padding-top: 10px;
+  padding-bottom: 24px;
+}
+
+.catalog__item-footer {
+  display: flex;
+  align-items: center;
+  column-gap: 29px;
+}
+
+.catalog__item-button {
+  display: flex;
+  align-items: center;
+}
+
+.catalog__item-price {
+  font-weight: 700;
+  font-size: 20px;
 }
