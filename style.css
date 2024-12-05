@@ -49,10 +49,15 @@ body {
   overflow: hidden !important;
 }
 
-.transparent {
-  background-color: transparent !important;
+.white-bg {
+  background-color: var(--color-light) !important;
   border: 1px solid var(--color-gray) !important;
   color: var(--color-gray-dark) !important;
+}
+
+.white-bg:hover {
+  background-color: var(--color-gray) !important;
+  transition-duration: 0.2s;
 }
 
 .container {
@@ -87,9 +92,19 @@ body {
   padding: 8px 16px;
   color: var(--color-light);
   background-color: var(--color-blue);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 2px;
-  cursor: pointer;
+}
+
+.header__button svg *[fill] {
+  fill: currentColor;
+}
+
+.header__button:hover {
+  color: var(--color-gray-dark);
+  background-color: var(--color-light);
+  border: 1px solid var(--color-gray);
+  transition-duration: 0.2s;
 }
 
 .header__button-label {
@@ -158,27 +173,30 @@ body {
   font-size: 36px;
 }
 
-.rests__header-search {
+.rests__header-input {
   height: 34px;
   width: 306px;
-  padding-inline: 32px;
+  padding-left: 32px;
+  padding-right: 10px;
+}
+
+.rests__header-input:focus {
+  outline: none;
+}
+
+.rests__header-search {
   position: relative;
 }
 
-.rests__header-search::placeholder {
-  font-size: 16px;
-  color: #bfbfbf;
-
+.rests__header-search svg {
+  position: absolute;
+  top: 10px;
+  left: 11px;
 }
 
-.rests__header-search::before {
-  position: absolute;
-  content: "";
-  width: 16px;
-  aspect-ratio: 1;
-  top: 0%;
-  right: 100%;
-  background-image: url("./images/search.svg");
+.rests__header-input::placeholder {
+  font-size: 16px;
+  color: #bfbfbf;
 }
 
 .rests__list {
@@ -189,6 +207,12 @@ body {
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
   border-radius: 7px;
   background-color: var(--color-light);
+  transition-duration: 0.2s;
+}
+
+.card:hover {
+  scale: 1.1;
+  transition-duration: 0.2s;
 }
 
 .card__link {
@@ -310,8 +334,16 @@ body {
   font-size: 18px;
 }
 
+.footer__menu-link:hover {
+  opacity: 0.7;
+}
+
 .footer__soc1als-list {
   display: flex;
   column-gap: 21px;
   align-items: center;
+}
+
+.footer__soc1als-link:hover {
+  opacity: 0.7;
 }
