@@ -447,7 +447,7 @@ h3 {
 }
 
 /* модалка */
-.card-modal__overlay {
+.cart-modal__overlay {
   display: none;
   position: fixed;
   top: 0;
@@ -459,11 +459,11 @@ h3 {
   background: rgba(0, 0, 0, 0.45);
 }
 
-.card-modal__overlay.open {
+.cart-modal__overlay.open {
   display: flex;
 }
 
-.card-modal {
+.cart-modal {
   width: 100%;
   max-width: 780px;
   border-radius: 5px;
@@ -471,21 +471,21 @@ h3 {
   background: var(--color-light);
 }
 
-.card-modal__header {
+.cart-modal__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 45px;
 }
 
-.card-modal__list {
+.cart-modal__list {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
   padding-bottom: 53px;
 }
 
-.card-modal__item {
+.cart-modal__item {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -494,11 +494,11 @@ h3 {
   padding-right: 15px;
 }
 
-.card-modal__item-title {
+.cart-modal__item-title {
   font-size: 18px;
 }
 
-.card-modal__item-price {
+.cart-modal__item-price {
   font-size: 20px;
   font-weight: 700;
   flex: 1;
@@ -507,7 +507,7 @@ h3 {
   padding-bottom: 3px;
 }
 
-.card-modal__item-controls {
+.cart-modal__item-controls {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -515,7 +515,7 @@ h3 {
   padding-bottom: 10px;
 }
 
-.card-modal__controls-button {
+.cart-modal__controls-button {
   font-size: 14px;
   background-color: var(--color-light);
   color: var(--color-blue-light);
@@ -525,18 +525,18 @@ h3 {
   height: 32px;
 }
 
-.card-modal__controls-button:hover {
+.cart-modal__controls-button:hover {
   color: var(--color-dark);
   background-color: var(--color-blue-light);
 }
 
-.card-modal__footer {
+.cart-modal__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.card-modal__footer-price {
+.cart-modal__footer-price {
   font-size: 20px;
   font-weight: 700;
   color: var(--color-light);
@@ -545,7 +545,7 @@ h3 {
   padding: 15px 20px;
 }
 
-.card-modal__footer-controls {
+.cart-modal__footer-controls {
   display: flex;
   column-gap: 11px;
 }
