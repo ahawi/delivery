@@ -23,6 +23,7 @@
   --color-gray-dark: #595959;
   --color-dark: #000000;
   --color-blue: #1890ff;
+  --color-blue-light: #40a9ff;
 
   --border-radius: 2px;
   --border-radius-card: 7px;
@@ -85,10 +86,6 @@ h3 {
 .white-bg:hover {
   background-color: var(--color-gray) !important;
   transition-duration: 0.2s;
-}
-
-.title {
-  padding-bottom: 44px;
 }
 
 .grid {
@@ -446,4 +443,108 @@ h3 {
 .catalog__item-price {
   font-weight: 700;
   font-size: 20px;
+}
+
+/* модалка */
+.card-modal__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.card-modal__overlay.open {
+  display: flex;
+}
+
+.card-modal {
+  width: 100%;
+  max-width: 780px;
+  border-radius: 5px;
+  padding: 40px 45px;
+  background: var(--color-light);
+}
+
+.card-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 45px;
+}
+
+.card-modal__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding-bottom: 53px;
+}
+
+.card-modal__item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-gray);
+  padding-right: 15px;
+}
+
+.card-modal__item-title {
+  font-size: 18px;
+}
+
+.card-modal__item-price {
+  font-size: 20px;
+  font-weight: 700;
+  flex: 1;
+  text-align: right;
+  padding-right: 47px;
+  padding-bottom: 3px;
+}
+
+.card-modal__item-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 14px;
+  padding-bottom: 10px;
+}
+
+.card-modal__controls-button {
+  font-size: 14px;
+  background-color: var(--color-light);
+  color: var(--color-blue-light);
+  border: 1px solid var(--color-blue-light);
+  border-radius: 2px;
+  width: 40px;
+  height: 32px;
+}
+
+.card-modal__controls-button:hover {
+  color: var(--color-dark);
+  background-color: var(--color-blue-light);
+}
+
+.card-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-modal__footer-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-light);
+  background-color: #262626;
+  border-radius: 5px;
+  padding: 15px 20px;
+}
+
+.card-modal__footer-controls {
+  display: flex;
+  column-gap: 11px;
 }
