@@ -8,6 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
     <link rel="stylesheet" href="./style/style.css" />
+    <script src="./js/main.js" defer></script>
     <title>Restaurant</title>
   </head>
   <body>
@@ -38,7 +39,11 @@
             </svg>
             <span class="header__button-label"> Войти </span>
           </button>
-          <button class="header__button button white-bg" type="button">
+          <button
+            class="header__button button white-bg"
+            id="cart"
+            type="button"
+          >
             <svg
               width="16"
               height="16"
@@ -71,7 +76,7 @@
             </div>
           </div>
           <ul class="catalog__list grid grid--catalog">
-            <li class="catalog__item">
+            <!-- <li class="catalog__item">
               <img
                 class="catalog__item-image"
                 src="./images/goods/1.jpg"
@@ -288,11 +293,85 @@
                 </button>
                 <span class="catalog__item-price">250 ₽</span>
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </section>
     </main>
+
+    <div class="cart-modal__overlay">
+      <div class="cart-modal">
+        <div class="cart-modal__header">
+          <h2 class="cart-modal__header-title">Корзина</h2>
+          <span class="cart-modal__header-close"
+            ><img
+              src="./images/icons/close-button.svg"
+              alt="Закрыть корзину"
+              width="25"
+              height="25"
+              loading="lazy"
+          /></span>
+        </div>
+        <ul class="cart-modal__list">
+          <li class="cart-modal__item">
+            <p class="cart-modal__item-title">Ролл угорь стандарт</p>
+            <span class="cart-modal__item-price">250 ₽</span>
+            <div class="cart-modal__item-controls">
+              <button class="cart-modal__controls-button">-</button>
+              <span class="card-item__controls-count">1</span>
+              <button class="cart-modal__controls-button">+</button>
+            </div>
+          </li>
+          <li class="cart-modal__item">
+            <p class="cart-modal__item-title">Ролл угорь стандарт</p>
+            <span class="cart-modal__item-price">250 ₽</span>
+            <div class="cart-modal__item-controls">
+              <button class="cart-modal__controls-button">-</button>
+              <span class="card-item__controls-count">1</span>
+              <button class="cart-modal__controls-button">+</button>
+            </div>
+          </li>
+          <li class="cart-modal__item">
+            <p class="cart-modal__item-title">Ролл угорь стандарт</p>
+            <span class="cart-modal__item-price">250 ₽</span>
+            <div class="cart-modal__item-controls">
+              <button class="cart-modal__controls-button">-</button>
+              <span class="card-item__controls-count">1</span>
+              <button class="cart-modal__controls-button">+</button>
+            </div>
+          </li>
+          <li class="cart-modal__item">
+            <p class="cart-modal__item-title">Ролл угорь стандарт</p>
+            <span class="cart-modal__item-price">250 ₽</span>
+            <div class="cart-modal__item-controls">
+              <button class="cart-modal__controls-button">-</button>
+              <span class="card-item__controls-count">1</span>
+              <button class="cart-modal__controls-button">+</button>
+            </div>
+          </li>
+          <li class="cart-modal__item">
+            <p class="cart-modal__item-title">Ролл угорь стандарт</p>
+            <span class="cart-modal__item-price">250 ₽</span>
+            <div class="cart-modal__item-controls">
+              <button class="cart-modal__controls-button">-</button>
+              <span class="card-item__controls-count">1</span>
+              <button class="cart-modal__controls-button">+</button>
+            </div>
+          </li>
+        </ul>
+        <div class="cart-modal__footer">
+          <div class="cart-modal__footer-price">1250 ₽</div>
+          <div class="cart-modal__footer-controls">
+            <button class="cart-modal__footer-button button">
+              Оформить заказ
+            </button>
+            <button class="cart-modal__footer-button button white-bg">
+              Отмена
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer container">
       <div class="footer__inner">

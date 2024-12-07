@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("./fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -249,23 +249,24 @@ h3,
 .rests__item-title {
   color: var(--color-dark);
   position: relative;
+  font-weight: 700;
 }
 
-.rests__item-title::after {
-  position: absolute;
-  content: "50 мин";
+.rests__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rests__item-time {
   color: var(--color-light);
-  background-color: var(--color-dark);
+  background-color: #262626;
+  padding-inline: 8px;
+  padding-block: 4px;
+  border-radius: var(--border-radius);
+  font-size: 12px;
   height: 22px;
   width: 56px;
-  font-size: 12px;
-  font-weight: 400;
-  border-radius: var(--border-radius);
-  padding-inline: 8px;
-  padding-top: 4px;
-  top: 50%;
-  left: 100%;
-  transform: translate(-100%, -50%);
 }
 
 .rests__item-description {
@@ -626,7 +627,6 @@ h3,
   .rests__item-image {
     width: 100%;
   }
-
   .footer {
     padding-block: 40px;
   }
