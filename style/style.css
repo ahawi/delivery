@@ -465,7 +465,7 @@ h3,
 
 .catalog__item-price {
   font-weight: 700;
-  font-size: clamp(18px, 1.80vw, 20px);
+  font-size: clamp(18px, 1.8vw, 20px);
 }
 
 /* модалка */
@@ -517,11 +517,11 @@ h3,
 }
 
 .cart-modal__item-title {
-  font-size: 18px;
+  font-size: clamp(14px, 1.6vw, 18px);
 }
 
 .cart-modal__item-price {
-  font-size: 20px;
+  font-size: clamp(18px, 1.8vw, 20px);
   font-weight: 700;
   flex: 1;
   text-align: right;
@@ -559,7 +559,7 @@ h3,
 }
 
 .cart-modal__footer-price {
-  font-size: 20px;
+  font-size: clamp(18px, 1.8vw, 20px);
   font-weight: 700;
   color: var(--color-light);
   background-color: #262626;
@@ -666,6 +666,35 @@ h3,
     row-gap: 15px;
   }
 
+  .cart-modal {
+    padding: 30px 35px;
+  }
+
+  .cart-modal__header {
+    padding-bottom: 30px;
+  }
+
+  .cart-modal__list {
+    padding-bottom: 30px;
+  }
+
+  .cart-modal__item-price {
+    padding-right: 15px;
+  }
+
+  .cart-modal__item-controls {
+    column-gap: 7px;
+  }
+
+  .cart-modal__controls-button {
+    font-size: 14px;
+    width: 30px;
+    aspect-ratio: 1;
+  }
+
+  .cart-modal__footer-price {
+    padding: 15px 20px;
+  }
 
   .footer__inner {
     column-gap: 20px;
@@ -686,8 +715,8 @@ h3,
   }
 
   .logo {
-   scale: 2;
-   padding-left: 30px;
+    scale: 2;
+    padding-left: 30px;
   }
 }
 
@@ -696,7 +725,8 @@ h3,
     padding-block: 40px;
   }
 
-  .rests, .catalog {
+  .rests,
+  .catalog {
     padding-bottom: 30px;
   }
 
@@ -729,5 +759,18 @@ h3,
     display: flex;
     align-items: end;
     justify-content: end;
+  }
+
+  .cart-modal {
+    padding: 20px 25px;
+  }
+
+  .cart-modal__item-title {
+    max-width: 130px;
+  }
+
+  .cart-modal__footer-controls {
+    flex-direction: column;
+    row-gap: 10px;
   }
 }
